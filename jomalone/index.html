@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jomalone_hs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width:767px)">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <header>
+    <!-- 로고 -->
+    <h1><a href="#"><span class="blind">jo malone london</span></a></h1>
+
+    <!-- 상단 배너 -->
+    <div class="banner">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="join">Join</a>
+      <a href="#" class="cart_icon"><span class="blind">cart_icon</span></a>
+      <a href="#" class="search_icon"><span class="blind">search_icon</span></a>
+    </div>
+    <div class="menu_icon">
+      <a href="#"><i class="fas fa-grip-lines"></i></a>
+    </div>
+
+  </header>
+
+  <!-- 상단 메뉴 -->
+  <div class="nav_bg"></div>
+  <nav>
+    <div class="nav_wrap">
+      <div class="mo_nav_top">
+        <div class="mo_nav_login">
+          <a href="#" class="login">Login</a>
+          <a href="#" class="join">Join</a>
+        </div>
+        <button type="button" class="btn_close"></button>
+      </div>
+      <ul class="nav_menu">
+        <li><a href="#">Cologne<span class="updown"></span></a>
+          <ul class="depth2">
+            <li><a href="#">Citrus</a>
+              <ul>
+                <li><a href="#">Lime Basil & Mandarin</a></li>
+                <li><a href="#">Basil & Neroli</a></li>
+                <li><a href="#">Grapefruit</a></li>
+                <li><a href="#">Earl Grey & Cucumber</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Floral</a>
+              <ul>
+                <li><a href="#">Orange Blossom</a></li>
+                <li><a href="#">Honeysuckle & Davana</a></li>
+                <li><a href="#">Mimosa & Cardamom</a></li>
+                <li><a href="#">Peony & Blush Suede</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Fruity</a>
+              <ul>
+                <li><a href="#">Pomegranate Noir</a></li>
+                <li><a href="#">English Pear & Freesia</a></li>
+                <li><a href="#">Nectarine Blossom & Honey</a></li>
+                <li><a href="#">Blackberry & bay</a></li>
+                <li><a href="#">English Oak & Redcurrant</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Spicy</a>
+              <ul>
+                <li><a href="#">Amber & Lavender</a></li>
+                <li><a href="#">English Oak & Hazelnut</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Light Floral</a>
+              <ul>
+                <li><a href="#">Red Roses</a></li>
+                <li><a href="#">Wild Bluebell</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Woody</a>
+              <ul>
+                <li><a href="#">Wood Sage & Sea Salt</a></li>
+                <li><a href="#">154</a></li>
+                <li><a href="#">Black Cedarwood & Juniper</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Cologne Intense</a>
+              <ul>
+                <li><a href="#">Jasmin Sambac & Marigold</a></li>
+                <li><a href="#">Myrrh & Tonka</a></li>
+                <li><a href="#">Orris & Sandalwood</a></li>
+                <li><a href="#">Tuberrose Angelica</a></li>
+                <li><a href="#">Velvet Rose & Oud</a></li>
+                <li><a href="#">Incense & Cedrat</a></li>
+                <li><a href="#">Dark Amber & Ginger Lily</a></li>
+                <li><a href="#">Oud & Bergamot</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Rare Teas</a>
+              <ul>
+                <li><a href="#">Oolong Tea</a></li>
+                <li><a href="#">Jade Leaf Tea</a></li>
+                <li><a href="#">Midnight Black Tea</a></li>
+                <li><a href="#">Silver Neeble Tea</a></li>
+                <li><a href="#">Darjeeling</a></li>
+                <li><a href="#">Golden Needle Tea</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Bath & Body<span class="updown"></span></a>
+          <ul class="depth2">
+            <li><a href="#">Bath & Shower</a>
+              <ul>
+                <li><a href="#">Body & Hand Wash</a></li>
+                <li><a href="#">Body Scrup</a></li>
+                <li><a href="#">Bath Oil</a></li>
+                <li><a href="#">Soap</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Body Care</a>
+              <ul>
+                <li><a href="#">Body & Hand Lotion</a></li>
+                <li><a href="#">Body Cream</a></li>
+                <li><a href="#">Dry Body Oil</a></li>
+                <li><a href="#">Hand Cream</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Hair Care</a>
+              <ul>
+                <li><a href="#">Shampoo</a></li>
+                <li><a href="#">Conditioner</a></li>
+              </ul>
+            </li>
+            <li><a href="#">English Mint & Ginger Lipbalm</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Home Collection<span class="updown"></span></a>
+          <ul class="depth2">
+            <li><a href="#">Candles</a>
+              <ul>
+                <li><a href="#">Home Candle</a></li>
+                <li><a href="#">Luxury Candle</a></li>
+                <li><a href="#">Delux Candle</a></li>
+                <li><a href="#">Travel Candle</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Diffusers</a>
+              <ul>
+                <li><a href="#">Lime Basil & Mandarin</a></li>
+                <li><a href="#">English Pear & Freesia</a></li>
+                <li><a href="#">Pomegranate Noir</a></li>
+                <li><a href="#">Red Rose</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Room Sprays</a>
+              <ul>
+                <li><a href="#">Lime Basil & Mandarin</a></li>
+                <li><a href="#">English Pear & Freesia</a></li>
+                <li><a href="#">Pomegranate Noir</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Linnen Sprays</a>
+              <ul>
+                <li><a href="#">Apua De Limone</a></li>
+                <li><a href="#">Lino Nel Vento</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Men's<span class="updown"></span></a>
+          <ul class="depth2">
+            <li><a href="#">Cologne</a></li>
+            <li><a href="#">Grooming</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mo_nav_footer">
+        <ul class="sub">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">매장안내</a></li>
+          <li><a href="#">법인판매</a></li>
+          <li><a href="#">고객관리지원팀 02-3440-2930</a></li>
+          <li><a href="#">더보기</a></li>
+        </ul>
+        <ul class="sns">
+          <li><a href="www.facebook.com" class="facebook" title="facebook"><img src="img/footer/facebook.png"></a></li>
+          <li><a href="www.twitter.com" class="twitter" title="twitter"><img src="img/footer/twitter.png"></a></li>
+          <li><a href="www.pinterest.com" class="pinterest" title="pinterest"><img src="img/footer/p.png"></a></li>
+          <li><a href="www.instagram.com" class="instagram" title="instagram"><img src="img/footer/instagram.png"></a></li>
+        </ul>
+      </div>
+
+      <div class="nav_search">
+        <input type="text" name="search" value="">
+        <button class="search_icon"></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 퀵메뉴 -->
+  <div class="quick_menu">
+    <ul id="category-toggle-list">
+    	<li class="project-category web active"><a href="#">New</a></li>
+    	<li class="project-category cro"><a href="#">Event</a></li>
+    	<li class="project-category seo"><a href="#">Gift</a></li>
+    	<li class="project-category content"><a href="#">Benefit</a></li>
+    </ul>
+  </div>
+
+  <!-- 메인 콘텐츠 -->
+  <section class="main">
+    <!-- NEW -->
+    <article class="new">
+      <h2 class="blind">new</h2>
+      <!-- New_swiper(Loop Mode) -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide_about">
+              <div class="text_box">
+                <p class="slide_title">HEART'S DESIRE</p>
+                <p class="slide_content">ENJOY A FLORAL FLIRTATION THIS VALENTINE'S DAY</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide_about">
+              <div class="text_box">
+                <p class="slide_title">MEET YOUR MATCH</p>
+                <p class="slide_content">믹스 앤 매치. 완벽한 페어링을 경험해 보세요.</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide_about">
+              <div class="text_box">
+                <p class="slide_title">IGNITE THE SENSES</p>
+                <p class="slide_content">일상의 탈출구. 신제품 브론즈 우드 앤 레더 코롱 인텐스를 경험해 보세요.<br>신비로운 숲 속에 들어온 듯한, 따스하게 감싸는 가죽과 같은 향입니다.</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+    <!-- //NEW 끝 -->
+
+    <!-- EVENT -->
+    <article class="event">
+      <h2>Event</h2>
+      <!-- Event_swiper(Loop Mode) -->
+      <div class="all_wrap">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="inner">
+                <a href="#"><img src="img/2.event/welcome.jpg" alt=""></a>
+                <div class="slide_about">
+                  <p class="slide_title">WELCOME GIFT</p>
+                  <p class="slide_content">온라인 부티크 첫 구매 고객께 미니어처 코롱 9ml를 선물로 드립니다. <br>결제 시 쿠폰 코드 창에 WELCOME을 입력해주세요.</p>
+                  <button>SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="inner">
+                <img src="img/2.event/online_limited.jpg" alt="">
+                <div class="slide_about">
+                  <p class="slide_title">ONLINE EXCLUSIVE</p>
+                  <p class="slide_content">오직 온라인에서만 만나보실 수 있는 특별한 아이템을 만나보세요.</p>
+                  <button>SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="inner">
+                <img src="img/2.event/indulgence.jpg" alt="">
+                <div class="slide_about">
+                  <p class="slide_title">A LITTLE INDULGENCE</p>
+                  <p class="slide_content">한정기간, 15만원 이상 구매 고객께 코롱 바이얼 샘플 5종을 선물로 드립니다.</p>
+                  <button>SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+          <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+        </div>
+      </div>
+    </article>
+    <!-- //EVENT 끝 -->
+
+    <!-- GIFT -->
+    <article class="gift">
+      <h2>Gift</h2>
+      <div class="all_wrap">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/3.gift/escapism.png" alt="">
+              <div class="slide_about">
+                <p class="slide_title">ESCAPISM</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/3.gift/cologne.png" alt="">
+              <div class="slide_about">
+                <p class="slide_title">COLOGNE COLLECTION</p>
+                <button>SHOP NOW</bu tton>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/3.gift/lace.png" alt="">
+              <div class="slide_about">
+                <p class="slide_title">BRIDAL LACE COLLECTION</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/3.gift/candle.png" alt="">
+              <div class="slide_about">
+                <p class="slide_title">FILLED WITH LIGHT</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/3.gift/him.png" alt="">
+              <div class="slide_about">
+                <p class="slide_title">FOR HIM</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/3.gift/her.png" alt="">
+              <div class="slide_about">
+                <p class="slide_title">FOR HER</p>
+                <button>SHOP NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+        <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+      </div>
+    </article>
+    <!-- //GIFT 끝 -->
+
+    <!-- BENEFIT -->
+    <article class="benefit">
+      <h2>Benefit</h2>
+      <div class="all_wrap">
+        <ul>
+          <li>
+            <img src="img/무료배송.jpg" alt="">
+            <p class="title">무료배송</p>
+            <p class="content">조 말론 런던 온라인 부티크의<br>모든 주문은 무료로 배송됩니다.</p>
+          </li>
+          <li>
+            <img src="img/포장.jpg" alt="">
+            <p class="title">시그니처 포장</p>
+            <p class="content">모든 구매 제품은 시그니처 박스에<br>정성스럽게 포장해 드립니다.</p>
+          </li>
+          <li>
+            <img src="img/샘플.jpg" alt="">
+            <p class="title">컴바이닝 샘플</p>
+            <p class="content">구매 시 원하시는 샘플을 3종까지 직접<br>선택하세요. 정교하고 심플한 절제미를<br>담은 향을 경험해 보세요.</p>
+          </li>
+          <li>
+            <img src="img/단독혜택.jpg" alt="">
+            <p class="title">단독혜택 & 이벤트</p>
+            <p class="content">온라인 부티크 뉴스레터 또는<br>문자 수신에 동의하시면 다양한 혜택 및<br>이벤트 소식을 받아보실 수 있습니다.</p>
+          </li>
+        </ul>
+      </div>
+
+    </article>
+    <!-- //BENEFIT 끝 -->
+  </section>
+  <!-- //메인콘텐츠 끝 -->
+
+
+  <footer>
+    <div class="footer_top">
+      <span class="cop">©Jo Malone London</span>
+      <ul class="sub">
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">매장안내</a></li>
+        <li><a href="#">법인판매</a></li>
+        <li><a href="#">고객관리지원팀 02-3440-2930</a></li>
+        <li><a href="#">배송정보</a></li>
+        <li><a href="#">이메일문의</a></li>
+        <li><a href="#">더보기</a></li>
+      </ul>
+      <ul class="sns">
+        <li><a href="www.facebook.com" class="facebook" title="facebook"><img src="img/footer/facebook.png"></a></li>
+        <li><a href="www.twitter.com" class="twitter" title="twitter"><img src="img/footer/twitter.png"></a></li>
+        <li><a href="www.pinterest.com" class="pinterest" title="pinterest"><img src="img/footer/p.png"></a></li>
+        <li><a href="www.instagram.com" class="instagram" title="instagram"><img src="img/footer/instagram.png"></a></li>
+      </ul>
+    </div>
+    <div class="footer_down">
+      <address>
+        <ul>
+          <li>이엘씨에이한국(유) 대표 SLAVIN PAUL&nbsp</li>
+          <li>서울시 강남구 강남대로 382 메리츠타워&nbsp</li>
+          <li>사업자등록 번호: 211-81-71889&nbsp</li>
+          <li>통신판매업신고번호: 강남-15737호&nbsp<a href="#">사업자정보조회&nbsp</a></li>
+          <li>고객관리지원팀: 02-3440-2930 user_support_kr@jomalone.com&nbsp</li>
+          <li>호스팅서비스 사업자: ㈜엘지유플러스</li>
+          <li><span class="cop">©Jo Malone London</span></li>
+        </ul>
+      </address>
+    </div>
+  </footer>
+
+  <!-- 로그인 팝업 -->
+  <div class="popup_body">
+    <div class="popup_bg"></div>
+    <div class="popup_login">
+      <h2>Login</h2>
+      <button class="btn_close"></button>
+      <form class="login_form" action="#" method="post">
+        <fieldset>
+          <div class="row">
+            <label>ID</label>
+            <input type="text" name="id">
+          </div>
+          <div class="row">
+            <label>PW</label>
+            <input type="text" name="pw">
+          </div>
+          <div class="login_area">
+            <a href="#">ID/PW 찾기</a>
+            <button type="submit">로그인</button>
+          </div>
+        </fieldset>
+      </form>
+      <div class="join_area">
+        <span>아직 회원이 아니신가요?</span>
+        <a href="#">회원가입</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 장바구니팝업 -->
+  <div class="popup_cart">
+    <button class="btn_close"></button>
+    <form class="cart_form" action="#" method="post">
+      <fieldset>
+        <div class="cart_top">
+          <label for="all_check"></label>
+          <input type="checkbox" name="all_check">
+          <span>상품 <span class="count">0</span>개</span>
+          <button><span class="blind">삭제</span></button>
+        </div>
+
+        <div class="cart_goods">
+          <!-- 상품이 없을 경우 -->
+          <div class="cart_empty">
+            <span class="icon icon_shopping"></span>
+            <p>장바구니가 비어있습니다.</p>
+          </div>
+          <!-- 상품이 있을 경우 -->
+          <div class="cart_list">
+            <ul>
+              <li>
+                <input type="checkbox" name="each_check">
+                <div class="img_box"><img src="img/상품.jpg" alt=""></div>
+                <dl>
+                  <dt>Basil & Neroli Colgne</dt>
+                  <dd class="goods_option">30ml</dd>
+                  <dd class="goods_price">￦<span class="goods_price">92,000</span></dd>
+                </dl>
+                <div class="total">
+                  <button>+</button>
+                  <span class="goods_count">0</span>
+                  <button>-</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cart_bot">
+          <div class="total">
+            <span class="title">TOTAL</span>
+            <span class="price">￦ 0</span>
+          </div>
+          <div class="btn_group">
+            <button type="button" class="favorit"></button>
+            <button type="button" class="buy">BUY NOW</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- 모바일 검색창 팝업 -->
+  <div class="popup_search">
+    <form class="" action="#" method="post">
+      <input type="text" name="mo_search" value="">
+      <button class="btn_search">Search</button>
+    </form>
+  </div>
+
+</body>
+</html>
