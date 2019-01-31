@@ -32,7 +32,7 @@ $(function(){
     breakpoints: {
       768: {
         slidesPerView: 'auto',
-        spaceBetween: 0,
+        spaceBetween: 10,
         slidesPerGroup: 1,
       }
     },
@@ -57,7 +57,7 @@ $(function(){
       },
       768: {
         slidesPerView: 'auto',
-        spaceBetween: 0,
+        spaceBetween: 10,
         slidesPerGroup: 1,
       }
     },
@@ -76,7 +76,7 @@ $(function(){
     $('.popup_cart').css('right','0px');
   });
   $('.popup_cart .btn_close').click(function(){
-    $('.popup_cart').css('right','-550px');
+    $('.popup_cart').css('right','-100%');
   });
   $('.menu_icon').click(function() {
     $('nav').css('left','0');
@@ -86,8 +86,13 @@ $(function(){
     $('nav').css('left','-100%');
     $('.nav_bg').hide();
   });
-  $('search_icon').click(function(){
-    $('popup_search').slideToggle();
+  $('.search_icon').click(function(){
+    $('.popup_search').slideToggle();
+  });
+  $('.mo_login').click(function(){
+    $('.popup_body').css('display','block');
+    $('nav').css('left','-100%');
+    $('.nav_bg').hide();
   });
 
 

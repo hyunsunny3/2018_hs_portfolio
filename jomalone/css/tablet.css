@@ -1,18 +1,7 @@
 @charset "UTF-8";
 
-body{}
 
-header .login, .join{display: none;}
-header .banner .cart_icon{
-  position: absolute; top: 15px; right: 60px;
-  width: 30px; height: 30px;
-}
-header .banner .search_icon{
-  position: absolute; top: 15px; right: 10px;
-  width: 30px; height: 30px;
-  background: url(../img/icon/search.png) center no-repeat;
-  background-size: 100% 100%;
-}
+
 header .menu_icon{display: block;
   position: fixed; top: 20px; left: 10px;
   font-size: 35px;
@@ -24,7 +13,7 @@ header .menu_icon{display: block;
 
 .nav_bg{
   display: none; position: absolute; top: 0; left: 0; z-index: 200;
-  width: 100%; height: 100%; background: #000; opacity: 0.5;
+  width: 100%; height: 100%; background: none;
   transition: 0.5s;
 }
 nav{
@@ -98,30 +87,11 @@ nav .mo_nav_footer .sns li{width: 40px; height: 40px; float: left; margin-right:
 nav .nav_wrap .nav_search{display: none;}
 
 
-.quick_menu{display: none;}
-
-
 /* section ======================================================= */
 
 section{
-  margin-left: 0px;
   padding-top: 0px;
 }
-article{
-  height: auto; position: relative;
-}
-.new{margin-bottom: 100px;}
-.new .swiper-container{
-  position: relative; height: 500px;
-}
-.all_wrap{width: 100%; height: auto;}
-.event img{width: 100%; height: 300px;}
-.event .swiper-slide{width: 90%;}
-.event .slide_content{width:80%; font-size: 16px; margin: 5px auto;}
-
-.gift .slide_title{font-size: 18px; margin-bottom: 10px; height: 50px;}
-.gift .swiper-slide{width: 90%;}
-
 .benefit{margin-bottom: 50px;}
 .benefit ul{overflow: hidden;}
 .benefit li{width: 30%; height: auto; text-align: center; float: left;
@@ -146,55 +116,3 @@ footer .footer_top{display: none;}
 .footer_down ul li{width:auto; float: none; color: #000; margin-top: 5px;}
 .footer_down a{color: #000;}
 .footer_down .cop{display: block; margin-top: 20px;}
-
-
-/* popup ======================================================= */
-
-/* 장바구니 팝업창 */
-.popup_cart{
-  width: 100%; height: 100vh;
-}
-.cart_form{ position: relative; top:50px; left: 0px; width: 100%;}
-.cart_top{/* 위 */
-  width: 90%; height: 30px; margin: 0 auto;
-}
-.cart_goods{/* 상품창 */
-  width: 90%; height: calc(100vh - 200px); margin: 0 auto;
-}
-/* 상품담았을 때 */
-.cart_list ul li{ top: 20px; height: 100px;}
-.img_box{position: absolute; left: 0px; top: 0; width: 100px; height: 100px; border: 1px solid Black;}
-.cart_list dl{position: absolute; top: 0; left: 110px;}
-
-.cart_bot{  /* 아래 */
-  width: 90%; height: 100px; margin: 0 auto;
-}
-.btn_group{position: relative; width:100%; height: 40px; margin: 0 auto;}
-.btn_group .favorit{
-  position: relative; top: 0; left: 0; width: 40px; height: 40px; border: 0;
-  margin-right: 10px;
-}
-.btn_group .buy{
-  position: absolute; top: 0; left:42px; width: 85%; height: 40px;
-  box-sizing: border-box;
-}
-
-
-/* 검색팝업창 */
-.popup_search{display: none;
-  position: fixed; top:80px; left: 0; z-index: 100;
-  width: 100%; height: 65px; background: #fffded; border: 1px solid #000;
-}
-.popup_search form{
-  position: relative; top: 10px; left: 2.5%;
-  width: 95%; height: 40px;
-}
-.popup_search input{
-  position: absolute; top: 0; left: 0;
-  width: 78%; height: 40px; border: 1px solid #000;
-}
-.popup_search .btn_search{
-  position: absolute; top: 0px; right: 0px;
-  width: 20%; height: 42px; font-size: 18px;
-  border: 2px solid #000; background: #fffded;
-}

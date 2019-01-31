@@ -24,8 +24,8 @@ button{cursor: pointer; transition: 0.5s; border:0;}
 /* header ======================================================= */
 header{
   position: fixed; top: 0; left: 0; z-index: 200;
-  width: 100%; height: 78.5px; background: #fffded;
-  border-bottom: 1px solid #000;
+  width: 100%; height: 80px; background: #fffded;
+  border-bottom: 2px solid #000; box-sizing: border-box;
 }
 header h1{width: 100%; height: 40px; margin-top: 20px;}
 header h1 a{
@@ -55,7 +55,7 @@ header .banner a:hover{ text-decoration: underline;}
 nav{
   position: fixed; top:80px; z-index: 200;
   width: 100%; height: 40px;
-  border-bottom: 1px solid #000; background: #fff;
+  border-bottom: 1px solid #e0e0e0; background: #fff;
 }
 nav .nav_bg{display: none;}
 nav .nav_wrap{
@@ -68,7 +68,7 @@ nav .nav_wrap .nav_menu{
 }
 nav .nav_wrap .nav_menu > li {
   position: relative; float: left; width:25%; text-align: center;
-  font-size: 20px;  box-sizing: border-box;
+  font-size: 18px;  box-sizing: border-box;
 }
 nav .nav_wrap .nav_menu > li .updown{display: none;}
 nav .nav_wrap .nav_menu > li > a{border-bottom: 1px solid #fff;}
@@ -229,9 +229,9 @@ article{
 .new .slide_about button:hover{background: #424242; color: #fff; border:1px solid white;}
 
 
-article h2{line-height: 150px; height:150px;text-align: center;}
+article h2{line-height: 100px; height:100px;text-align: center;}
 
-.all_wrap{position: relative; max-width: 1200px; margin: 0 auto; max-height: 500px;}
+.all_wrap{position: relative; max-width: 1200px; margin: 0 auto; }
 .slide_about{width: 100%; height: 200px; text-align: center;}
 .slide_title{font-size: 24px; margin-top: 20px;}
 .slide_content{font-size: 16px; margin-top: 5px;}
@@ -299,7 +299,7 @@ article h2{line-height: 150px; height:150px;text-align: center;}
     background-repeat: no-repeat;
 }
 .gift .swiper-button-next, .gift .swiper-button-prev {
-    margin-top: -80px;
+    margin-top: -120px;
 }
 .gift .swiper-button-next, .gift .swiper-container-rtl .swiper-button-prev{
     background-image: none;
@@ -390,22 +390,23 @@ fieldset{position: relative; border:0;}
 
 /* 장바구니 팝업창 */
 .popup_cart{
-  position: fixed; z-index: 200; top: 0; right: -550px; width: 500px; height: 100vh;
+  position: fixed; z-index: 200; top: 0; right: -100%; width: 500px; height: 100vh;
   background: #fff; transition: 0.5s;
 }
 .cart_form{ position: relative; top:100px; left: 30px; width: 440px;}
 
 .cart_top{/* 위 */
-  position: relative; width: 100%; height: 30px; font-size: 18px;
-  border-bottom: 1px solid #000; padding-left: 10px; font-weight: bold;
+  position: relative; width: 100%; height: 30px; font-size: 16px;
+  border-bottom: 1px solid #e0e0e0; padding-left: 10px; font-weight: bold;
   box-sizing: border-box;
 }
 .cart_top input{position: relative; left: 0;}
-.cart_top button{
+.cart_top a {position: absolute; right: 10px; font-size: 22px;}
+/* .cart_top button{
   position: absolute; right: 10px; width: 18px; height: 26px;
   background: url(../img/icon/del.png)center no-repeat;
   background-size: 100% 100%; border: 0;
-}
+} */
 
 .cart_goods{/* 상품창 */
   position: relative; padding-left: 10px; box-sizing: border-box;
@@ -428,7 +429,6 @@ fieldset{position: relative; border:0;}
 }
 .cart_list ul{position: relative; width: 100%; height: 100%;}
 .cart_list ul li{position: relative; top: 20px; width: 100%; height: 100px;}
-.cart_list label{}
 .img_box{position: absolute; left: 20px; top: 0; width: 100px; height: 100px; border: 1px solid Black;}
 .img_box img{width: 100%; height: 100%;}
 .cart_list dl{
