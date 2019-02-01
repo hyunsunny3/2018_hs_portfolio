@@ -112,7 +112,7 @@ footer{height: auto; border: 0;}
 footer .footer_top{display: none;}
 
 .footer_down{height: 100%; background: #efefef; font-size: 14px;}
-.footer_down ul{width: auto; padding: 50px; border:}
+.footer_down ul{width: auto; padding: 50px;}
 .footer_down ul li{width:auto; float: none; color: #000; margin-top: 5px;}
 .footer_down a{color: #000;}
 .footer_down .cop{display: block; margin-top: 20px;}
