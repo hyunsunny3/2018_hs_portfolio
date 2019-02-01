@@ -24,7 +24,6 @@ $(function(){
 
   var eventSwiper = new Swiper('.event .swiper-container',{
     loop:true,
-    centeredSlides: true,
     navigation:{
       nextEl:'.event .swiper-button-next',
       prevEl:'.event .swiper-button-prev',
