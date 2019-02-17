@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: bodoni;
+  src:url(../font/BodoniStd.otf);
+}
+@font-face {
+  font-family: bodoniwide;
+  src:url(../font/BodoniStd-Bold.otf);
+}
+@font-face {
+  font-family: nanum;
+  src: url(../font/NanumGothic.ttf);
+}
+
+/* reset, common ================================================ */
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #000; display: inline-block;}
+img{max-width: 100%;}
+label, span{display: inline-block;}
+body{font-family: ; overflow-x: hidden; font-family: 'bodoni','nanum', sans-serif;}
+
+/* header ======================================================= */
+
+header{
+  position: relative; top: 0; left: 0;
+  width: 100%; height: 100vh; background: #f5f5f5;
+}
+.main_wrap{
+  position: relative; top: 0; left: 0; float: left;
+  width: 70%; height: 100%; overflow: hidden;
+}
+.info_wrap{
+  position: relative; top: 0; float: left; z-index: 50;
+  width: 30%; height: 100%; background: #eae5e5;
+  padding-top: 60px; text-align: center; box-sizing: border-box;
+  color: #4d4d4d;
+}
+nav{
+  position: fixed; top: 0; left: 0; z-index: 100;
+  width: 100%; background: #eae5e5;
+}
+nav ul{
+  width: 360px; height: 20px;
+  padding: 20px 0; margin: 0 auto;
+}
+nav ul li{
+  padding: 0 20px; float: left;
+}
+nav ul li a{ color: #8b8b8b; font-weight: 400; font-size: 18px;}
+nav ul li a:hover{color: #e83556; font-weight: 400;}
+.main_wrap .img_box{
+  width: 100%; height: 100%;
+  background: url(../img/main.jpg) no-repeat 0 0;
+  background-size: auto 100%;
+}
+.main_wrap .img_box .txt_box{
+  position: absolute; bottom: 20%; left: 15%;
+  color: #4d4d4d; font-size: 1.5em; font-family: bodoniwide;
+}
+.main_wrap .img_box .txt_box h1{
+  color: #e83556; font-size: 3em;
+  margin-top: -10px; margin-bottom: 5px; margin-left: 0px;
+}
+
+.info_wrap .img{
+  width: 300px; height: 350px; border: 1px solid black;
+  margin: 100px auto 50px; border-radius: 100%;
+}
+.info_wrap .txt dt{ margin-bottom: 20px;}
+.info_wrap .txt dd{
+  margin-top: 10px;
+}
+
+
+/* section ======================================================= */
+
+section{
+  position: relative; top: 0; left: 0;
+  padding-bottom: 100px; box-sizing: border-box;
+}
+article{
+  position: relative; top: 0; left: 0;
+  width: 100%; height: 100vh; box-sizing: border-box;
+  padding: 100px 0 100px 0;
+  background: #fff;
+}
+article .wrap{
+  position: relative; max-width: 1100px; height: 100%; background: #eae5e5;
+  margin: 0 auto; padding: 50px 100px; box-sizing: border-box;
+}
+article .title dl{position: relative;}
+article .title dt{position: relative; font-size: 2em;}
+article .title dt h2{color: #e83556;}
+article .title dd{font-size: 0.9em; margin-top: -8px; color: #8b8b8b;}
+
+.about table{ margin-top: 50px; color: #4d4d4d;}
+.about table tr td{
+  vertical-align: top;
+  min-width: 130px;
+  padding: 0 0 20px 0;
+}
+
+.skill ul{
+  width:100%;
+  margin-top: 50px;
+}
+.skill ul li{
+  width: 100%; height: 30px;
+}
+.skill ul li.skill_title{
+  color: #4d4d4d;
+  margin-top: 20px;
+}
+
+.portfolio ul{ width:100%; margin-top: 50px;}
+.portfolio ul li{
+  float: left; width: 50%; height: 250px;
+  margin-bottom: 30px;
+}
+.portfolio ul li dl{
+  position: relative;
+  padding: 20px 0 0 70px;
+}
+.portfolio ul li dl dt{
+  font-size: 1.5em;
+}
+.portfolio ul li dd{
+  margin-top: 15px;
+}
+.portfolio ul li > dd > a{
+  width: 100%; height: 100%;
+}
+.portfolio ul li img{
+  width: 100%; height: 100%;
+}
+.btn_demo{
+  width: 100px; height: 35px;
+  border: 3px solid #e83556; color: #4d4d4d;
+  border-radius: 20px; margin-top: 20px;
+  text-align: center; line-height: 35px; font-size: 18px;
+  transition: 0.3s;
+}
+.btn_demo:hover{
+  background: #e83556; color: #eae5e5;
+}
+
+
+
+/* footer ======================================================= */
+
+footer{
+  position: relative; top: 0; left: 0;
+  width: 100%; padding: 50px 0;
+  background: #eae5e5; color: #4d4d4d;
+}
+.footer_wrap{
+  position: relative;
+  max-width: 800px; height: 100px;
+  margin: 0 auto;
+}
+.copyright{
+  position: absolute; top: 50%; transform: translateY(-50%); left: 0;
+}
+.contact{
+  position: absolute; top: 50%; transform: translateY(-50%); right: 0;
+}
+.contact li{margin-bottom: 5px;}
+.contact a{ margin-left: 10px; color: #4d4d4d;}

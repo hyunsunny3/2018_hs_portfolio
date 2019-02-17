@@ -1,0 +1,292 @@
+$(document).ready(function(){
+    function slide(element,spd){
+        var swiper = new Swiper('.'+ element +' .swiper-container', {
+            slidesPerView: 'auto',
+            paginationClickable: true,
+            speed: spd,
+            loop: true,
+            pagination: {
+                el: '.'+ element +' .swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.'+ element +' .swiper-button-next',
+                prevEl: '.'+ element +' .swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // }
+        });
+    }
+    var swiper = new Swiper('.main_visual .swiper-container', {
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        speed: 500,
+        loop: true,
+        pagination: {
+            el: '.main_visual .swiper-pagination',
+        },
+    });
+
+
+    $('.btn_menu').click(function(e){
+        e.preventDefault();
+        $('.header').toggleClass('active')
+    });
+    $('.list_movie li .btn_first').click(function(e){
+        e.preventDefault();
+        $('.list_movie ul').toggleClass('active')
+    });
+
+    /*$('.list_movie li a').click(function(e){
+        e.preventDefault();
+        if($(this).hasClass('btn_first')){
+            return
+        }else{
+            if($('.list_movie ul').hasClass('active')){
+                $('.pop_movie').addClass('active')
+                $('.wrap').addClass('movie_on')
+                var number = $(this).parent().index()
+                function movie(movie_url,title, sub){
+                    $(".movie_area iframe").attr('src', movie_url + '?autoplay=1');
+                    $(".pop_movie_header dt").text(title);
+                    $(".pop_movie_header dd").text(sub);
+                }
+                switch(number){
+                    case 0:
+                        break;
+                    case 1:
+                        movie('https://player.vimeo.com/video/251773763','Audi Service','아우디의 프로그레스는 멈추지 않습니다')
+                        console.log('movie1');
+                        break;
+                    case 2:
+                        movie('https://player.vimeo.com/video/252291109','Audi Coupon package','차량을 최적의 컨디션으로 유지하는데 도움을 주는 차량 관리 프로그램 입니다')
+                        console.log('movie2');
+                        break;
+                    case 3:
+                        movie('https://player.vimeo.com/video/252291842','Audi Mobility support','차량에 문제가 생겼을 경우 일상생활 및 업무에 지장이 없도록 도와드리는 서비스입니다')
+                        console.log('movie3');
+                        break;
+                    case 4:
+                        movie('https://player.vimeo.com/video/252100353','Progress never stops (2)','우리가 상상할 수 없었던 곳으로.')
+                        console.log('movie3');
+                        break;
+                    case 5:
+                        movie('https://player.vimeo.com/video/251773710','Progress never stops (1)','당신과 내가 상상할 수 없었던 곳으로.')
+                        console.log('movie3');
+                        break;
+                }
+            }else{
+                return false;
+            }
+        }
+    });*/
+    $('.pop_movie .btn_close').click(function(e){
+        e.preventDefault();
+        $('.pop_movie ').removeClass('active')
+        $(".movie_area iframe").attr('src', '');
+        var len = $(".layer_popup").filter(":visible").length;
+        if(len == 0){
+            $('html,body').css('overflow','visible');
+            $('html,body').css('height','auto');
+        }else{
+            $('html,body').css('overflow','hidden');
+            $('html,body').css('height','100%');
+        }
+    });
+    // Tab(s)
+    $('.tab_type > .btn_tab li>a').click(function(e){
+        e.preventDefault()
+        var idx = $(this).parent().index()
+        var tcw = $(this).closest('.btn_tab').next('.tab_content_wrap')
+
+        $('.tab_type > .btn_tab li>a').removeClass('active')
+        $(this).addClass('active')//.parent().siblings().children().removeClass('active')
+        tcw.children().eq(idx).addClass('active').siblings().removeClass('active')
+    })
+    // Tab(e)
+
+    // Tab(s)
+    $('.tab_type2 > .btn_tab li>a').click(function(e){
+        e.preventDefault()
+        var idx = $(this).parent().index()
+        var tcw = $(this).closest('.btn_tab').next('.tab_content_wrap')
+        $(this).parent().addClass('active').siblings().removeClass('active')
+        tcw.children().eq(idx).addClass('active').siblings().removeClass('active')
+    })
+    // Tab(e)
+
+
+    // $(function() {
+        // if($('.wrap input,.wrap textarea').length > 0){
+           $('input, textarea').placeholder();
+        // }
+    // });
+    if($('.main_layout').length > 0){
+        TweenMax.from('.main_visual .txt_main_visual strong', 1, {y:100, alpha:0, delay:.3, ease:Linear.easeNone});
+        TweenMax.from('.main_visual .txt_main_visual p', 1, {y:100, alpha:0, delay:.5, ease:Linear.easeNone});
+
+
+
+        $(window).scroll(function(){
+            var sctop = $(window).scrollTop();
+            console.log(sctop)
+            if(sctop >= 100){
+                TweenMax.to('.main_layout .main_audi_info dt', 1, {y:0, alpha:1, delay:.3, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_audi_info dd', 1, {y:0, alpha:1, delay:.5, ease:Linear.easeNone});
+            }
+            if(sctop >= 300){
+                TweenMax.to('.main_layout .main_service_people dt', 1, {y:0, alpha:1, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_people dt + dd', 1, {y:0, alpha:1, delay:.3, ease:Linear.easeNone});
+            }
+            if(sctop >= 400){
+                TweenMax.to('.main_layout .main_service_people .btn_more', 1, {y:0, alpha:1, ease:Linear.easeNone});
+            }
+            if(sctop >= 600){
+                TweenMax.to('.main_layout .main_service_people dd ul li:eq(0)', 1, {y:0, alpha:1, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_people dd ul li:eq(1)', 1, {y:0, alpha:1, delay:.3, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_people dd ul li:eq(2)', 1, {y:0, alpha:1, delay:.5, ease:Linear.easeNone});
+            }
+            if(sctop >= 1400){
+                TweenMax.to('.main_layout .main_service_campaign>div>dl>dt', 1, {y:0, alpha:1, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_campaign>div>dl>dd p', 1, {y:0, alpha:1, delay:.3, ease:Linear.easeNone});
+            }
+            if(sctop >= 1700){
+                TweenMax.to('.main_layout .main_service_campaign>div>dl>dd ul li:nth-child(2n+1) .img_box', 1, {y:0, alpha:1, ease:Linear.easeNone});
+            }
+            if(sctop >= 1800){
+                TweenMax.to('.main_layout .main_service_campaign>div>dl>dd ul li:nth-child(2n+1) .txt_box', 1, {alpha:1, ease:Linear.easeNone});
+            }
+            if(sctop >= 2200){
+                TweenMax.to('.main_layout .main_service_campaign>div>dl>dd ul li:nth-child(2n+2) .img_box', 1, {y:0, alpha:1, ease:Linear.easeNone});
+            }
+            if(sctop >= 2300){
+                TweenMax.to('.main_layout .main_service_campaign>div>dl>dd ul li:nth-child(2n+2) .txt_box', 1, {alpha:1, ease:Linear.easeNone});
+            }
+            if(sctop >= 2600){
+                TweenMax.to('.main_layout .main_service_enter>div>dl>dt', 1, {y:0, alpha:1, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_enter>div>dl>dd p', 1, {y:0, alpha:1, delay:.3, ease:Linear.easeNone});
+            }
+            if(sctop >= 2800){
+                TweenMax.to('.main_layout .main_service_enter>div>dl>dd ul li:eq(0)', 1, {y:0, alpha:1, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_enter>div>dl>dd ul li:eq(1)', 1, {y:0, alpha:1, delay:.3, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_enter>div>dl>dd ul li:eq(2)', 1, {y:0, alpha:1, delay:.5, ease:Linear.easeNone});
+                TweenMax.to('.main_layout .main_service_enter>div>dl>dd ul li:eq(3)', 1, {y:0, alpha:1, delay:.7, ease:Linear.easeNone});
+            }
+
+        });
+    }
+
+})
+
+// Layerpop(s)
+function pop_layer_view(layer, st){
+    if(st != 'close'){
+        $(layer).addClass('active');
+        $(layer).children('.layer_wrap').scrollTop(0);
+        // var top = $(window).scrollTop();
+        // $(layer).find('.layer_wrap').css('top',top+300+'px');
+        $('html,body').css('overflow-y','hidden');
+        // $('html,body').css('height','100%');
+        $(layer).children('.layer_wrap').scroll(function(){
+            var sctop = $(layer).children('.layer_wrap').scrollTop(); //스크롤 위치
+            var btn_cls = $('.layer_wrap .btn_close');
+            console.log(sctop)
+            if(sctop > 0){
+                btn_cls.css('transform','translateY('+sctop+'px)')
+            }
+            else{
+                btn_cls.css('transform','translateY(0px)')
+            };
+        });
+
+    }else{
+        $(layer).removeClass('active');
+    }
+}
+
+$(document).ready(function(){
+    $('.layer_wrap .btn_close').click(function(e){
+        e.preventDefault();
+        var layer = $(this).closest('.layer_popup').attr('id');
+        var btn_cls = $('.layer_wrap .btn_close');
+        layer = '#'+layer;
+        pop_layer_view(layer,'close');
+        $('html,body').css('overflow-y','visible');
+        // $('html,body').css('height','auto');
+        btn_cls.css('transform','translateY(0px)')
+    });
+
+
+
+	//Genuine Shopping 장바구니
+	$(".btn-WishList").click(function(){
+		$(".cart_view_layer").addClass("active");
+	});
+	$(".btn_cartview_close").click(function(){
+		$(".cart_view_layer").removeClass("active");
+	});
+
+    $('.content.entertainment').scroll(function(){
+        var sctop = $('.content.entertainment').scrollTop();
+        if($('.btn_list_top').length > 0){
+            if(sctop > 100){
+                $('.btn_list_top').addClass('active')
+            }else{
+                $('.btn_list_top').removeClass('active')
+            }
+        }
+    });
+
+	// entertainment 구매문의
+	$('.agreement_list > li > a').click(function(){
+		var checkElement = $(this).parent().find(".agreement_detail");
+		if(checkElement.is(':visible') ) {
+			$('.agreement_detail:visible').slideUp('fast');
+			$('.agreement_list > li').removeClass('active');
+		}else {
+			$('.agreement_list > li').removeClass('active');
+			$('.agreement_detail:visible').slideUp('fast');
+			checkElement.slideDown('fast');
+			$(this).parent().addClass('active');
+		}
+    });
+	// 구매문의 슬라이드
+    /*
+	var product_slide = new Swiper(".product_slide .swiper-container", {
+		slidesPerView: 4,
+		spaceBetween: 15,
+		paginationClickable: true,
+		pagination: {
+			el: '.product_slide .swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.product_slide .swiper-button-next',
+			prevEl: '.product_slide .swiper-button-prev',
+		}
+	});
+	var product_slideLength = $(".product_slide .swiper-slide").length;
+	if (product_slideLength < 5) {
+		$(".product_slide .swiper-pagination").hide();
+	}
+    */
+	// var product_slide02 = new Swiper(".stock_box .swiper-container", {
+	// 	slidesPerView: 1,
+	// 	paginationClickable: true,
+	// 	pagination: {
+	// 		el: '.stock_box .swiper-pagination',
+	// 		clickable: true,
+	// 	},
+	// 	navigation: {
+	// 		nextEl: '.stock_box .swiper-button-next',
+	// 		prevEl: '.stock_box .swiper-button-prev',
+	// 	}
+	// });
+
+
+});
+
+
+
+
