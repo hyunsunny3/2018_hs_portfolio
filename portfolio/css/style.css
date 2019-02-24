@@ -96,12 +96,13 @@ article .title dt{position: relative; font-size: 2em;}
 article .title dt h2{color: #e83556;}
 article .title dd{font-size: 0.9em; margin-top: -8px; color: #8b8b8b;}
 
-.about table{ margin-top: 50px; color: #4d4d4d;}
-.about table tr td{
+.about table.pc { margin-top: 50px; color: #4d4d4d;}
+.about table.pc tr td{
   vertical-align: top;
   min-width: 130px;
   padding: 0 0 20px 0;
 }
+.about table.mobile{display: none;}
 
 .skill ul{
   width:100%;
