@@ -64,6 +64,7 @@ nav ul li a:hover{color: #e83556; font-weight: 400;}
   margin-top: -10px; margin-bottom: 5px; margin-left: 0px;
 }
 
+.info_wrap .txt_box{display: none;}
 .info_wrap .img{
   width: 300px; height: 350px; border: 1px solid black;
   margin: 100px auto 50px; border-radius: 100%;
