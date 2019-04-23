@@ -69,6 +69,8 @@ nav ul li a:hover{color: #e83556; font-weight: 400;}
 .info_wrap .img{
   width: 300px; height: 350px; border: 1px solid black;
   margin: 100px auto 50px; border-radius: 100%;
+  background: url(../img/img_me.jpg);
+  background-size: 100% 100%;
 }
 .info_wrap .txt dt{ margin-bottom: 20px;}
 .info_wrap .txt dd{
@@ -88,8 +90,12 @@ article{
   padding: 100px 0 100px 0;
   background: #fff;
 }
+article.about{
+  height: 500px;
+}
+
 article .wrap{
-  position: relative; max-width: 1100px; height: 100%; background: #eae5e5;
+  position: relative; max-width: 1100px; min-height: 650px; height: 100%; background: #eae5e5;
   margin: 0 auto; padding: 50px 100px; box-sizing: border-box;
 }
 article .title dl{position: relative;}
